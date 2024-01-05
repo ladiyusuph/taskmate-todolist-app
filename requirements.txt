@@ -3,6 +3,8 @@ crispy-bootstrap5==2023.10
 Django==5.0.1
 django-crispy-forms==2.1
 django-environ==0.11.2
+gunicorn==21.2.0
+packaging==23.2
 pip==23.3.2
 psycopg2==2.9.9
 setuptools==68.2.2
