@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  <title>Welcome to Taskmate!</title>
+{% endblock title %}
+  
+{% block content %}
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-lg-4">
+            <img src="{% static 'images/notes-1.jpg' %}" alt="Notes" class="rounded-lg shadow-sm" width="360" height="250">
+        </div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/notes-2.jpg' %}" alt="Notes" class="rounded-lg shadow-sm" width="360" height="250">
+        </div>
+        <div class="col-lg-4">
+            <img src="{% static 'images/notes-1.jpg' %}" alt="Notes" class="rounded-lg shadow-sm" width="360" height="250">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3 text-center mx-auto">
+            <p class="h3 text-primary">Taskmate is a simple task management app to keep track of your daily tasks.</p>
+            <p class="h5 mt-3">It is built using Django and Bootstrap.</p>
+            
+            {% if user.is_authenticated %}
+            <center><a href="{% url 'todolist' %}"><button type="button" class="btn btn-primary btn-lg mt-3 shadow">Let's Get Started</button></a></center>
+            {% else %}
+            <center><a href="{% url 'register' %}"><button type="button" class="btn btn-primary btn-lg mt-3 shadow">Click Here to Sign up</button></a></center>
+            {% endif %}
+        </div>        
+    </div>
+</div>
+
+{% endblock content %}
