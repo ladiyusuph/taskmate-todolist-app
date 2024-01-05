@@ -12,7 +12,8 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 DEBUG = env('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'todolist-taskmate.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['todolist-taskmate.up.railway.app']
 
 # Application definition
 
